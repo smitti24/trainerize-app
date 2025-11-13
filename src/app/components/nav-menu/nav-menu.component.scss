@@ -1,0 +1,26 @@
+.nav-link {
+  color: rgba(254, 188, 17, 0.8);
+  position: relative;
+  
+  &:hover {
+    color: #FEBC11;
+    background: rgba(254, 188, 17, 0.1);
+  }
+  
+  &.active {
+    color: #FEBC11;
+    background: rgba(25, 98, 111, 0.2);
+    
+    &::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 60%;
+      height: 2px;
+      background: linear-gradient(90deg, transparent, #FEBC11, transparent);
+    }
+  }
+}
+

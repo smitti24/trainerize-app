@@ -1,0 +1,21 @@
+/* Reusable button component styles */
+.custom-button {
+  background-color: #FEBC11;
+  color: #000000;
+  border: 2px solid #FEBC11;
+  box-shadow: 0 4px 6px rgba(254, 188, 17, 0.3);
+  
+  &:hover {
+    background-color: #000000;
+    color: #FEBC11;
+    border-color: #FEBC11;
+    box-shadow: 0 6px 12px rgba(254, 188, 17, 0.5);
+    transform: translateY(-2px);
+  }
+  
+  &:active {
+    transform: translateY(0);
+    box-shadow: 0 2px 4px rgba(254, 188, 17, 0.3);
+  }
+}
+

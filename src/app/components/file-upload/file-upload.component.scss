@@ -1,0 +1,84 @@
+.upload-zone {
+  border: 2px dashed rgba(25, 98, 111, 0.4);
+  background: linear-gradient(
+    135deg,
+    rgba(25, 98, 111, 0.05) 0%,
+    rgba(0, 0, 0, 0.3) 100%
+  );
+  min-height: 250px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+  &:hover {
+    border-color: rgba(254, 188, 17, 0.6);
+    background: linear-gradient(
+      135deg,
+      rgba(25, 98, 111, 0.1) 0%,
+      rgba(254, 188, 17, 0.05) 100%
+    );
+    
+    .upload-icon {
+      color: #FEBC11;
+      transform: scale(1.1);
+    }
+  }
+  
+  &.dragging {
+    border-color: #FEBC11;
+    background: linear-gradient(
+      135deg,
+      rgba(254, 188, 17, 0.15) 0%,
+      rgba(25, 98, 111, 0.1) 100%
+    );
+    border-style: solid;
+    
+    .upload-icon {
+      color: #FEBC11;
+      transform: scale(1.15);
+      animation: bounce 0.5s ease-in-out;
+    }
+  }
+  
+  &.has-file {
+    border-color: rgba(254, 188, 17, 0.6);
+    border-style: solid;
+    background: linear-gradient(
+      135deg,
+      rgba(25, 98, 111, 0.15) 0%,
+      rgba(254, 188, 17, 0.08) 100%
+    );
+  }
+}
+
+.upload-icon,
+.file-icon {
+  color: #19626f;
+  transition: all 0.3s ease;
+}
+
+.file-icon {
+  color: #FEBC11;
+}
+
+.remove-btn {
+  background-color: rgba(25, 98, 111, 0.2);
+  color: #FEBC11;
+  border: 1px solid rgba(254, 188, 17, 0.3);
+  
+  &:hover {
+    background-color: rgba(254, 188, 17, 0.1);
+    border-color: #FEBC11;
+    color: #FEBC11;
+  }
+}
+
+@keyframes bounce {
+  0%, 100% {
+    transform: scale(1.15) translateY(0);
+  }
+  50% {
+    transform: scale(1.15) translateY(-10px);
+  }
+}
+

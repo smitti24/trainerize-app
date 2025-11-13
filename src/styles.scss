@@ -1,1 +1,33 @@
-/* You can add global styles to this file, and also import other style files */
+@use "tailwindcss";
+
+/* Dark mode color scheme */
+:root {
+  color-scheme: dark;
+  --brand-yellow: #FEBC11;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  height: 100vh;
+  overflow: hidden;
+}
+
+body {
+  height: 100vh;
+  overflow: hidden;
+  background-color: #000000;
+  background-image: 
+    linear-gradient(180deg, rgba(0, 0, 0, 0.55) 0%, #000000 100%),
+    url('/background.jpg');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  color: #FEBC11;
+  margin: 0;
+  padding: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+}

@@ -1,0 +1,22 @@
+.card-container {
+  background: linear-gradient(
+    135deg,
+    rgba(25, 98, 111, 0.1) 0%,
+    rgba(254, 188, 17, 0.05) 100%
+  );
+  border: 2px solid rgba(25, 98, 111, 0.3);
+  box-shadow: 
+    0 10px 30px rgba(25, 98, 111, 0.2),
+    inset 0 1px 0 rgba(254, 188, 17, 0.1);
+  transition: all 0.3s ease;
+  
+  &:hover {
+    border-color: rgba(254, 188, 17, 0.4);
+    box-shadow: 
+      0 15px 40px rgba(25, 98, 111, 0.3),
+      0 0 20px rgba(254, 188, 17, 0.1),
+      inset 0 1px 0 rgba(254, 188, 17, 0.2);
+    transform: translateY(-2px);
+  }
+}
+

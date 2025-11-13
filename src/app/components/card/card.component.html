@@ -1,0 +1,18 @@
+<div class="card-container rounded-xl p-6 sm:p-8 backdrop-blur-sm">
+  @if (title()) {
+    <h2 class="text-2xl sm:text-3xl font-bold mb-2" style="color: #19626f;">
+      {{ title() }}
+    </h2>
+  }
+  
+  @if (subtitle()) {
+    <p class="text-base sm:text-lg mb-6" style="color: rgba(254, 188, 17, 0.8);">
+      {{ subtitle() }}
+    </p>
+  }
+  
+  <div class="card-content">
+    <ng-content />
+  </div>
+</div>
+

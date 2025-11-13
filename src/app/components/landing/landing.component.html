@@ -1,0 +1,30 @@
+<div class="flex-1 flex items-center justify-center relative overflow-hidden px-4 sm:px-6 lg:px-8 py-8 sm:py-12">
+  <div class="relative z-10 w-full max-w-7xl">
+    <div class="text-center animate-fade-in-up">
+      <h1 class="flex flex-col gap-2 sm:gap-3 mb-8 sm:mb-12">
+        <span class="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-extrabold uppercase tracking-wider">
+          <span class="brand-text" style="color: #19626f;">Traineriz</span><span class="brand-accent animate-glow" style="color: #FEBC11;">E</span>
+        </span>
+        <span class="text-lg sm:text-xl md:text-2xl font-light lowercase italic tracking-wide" 
+              style="color: rgba(254, 188, 17, 0.7);">
+          powered by
+        </span>
+        <span class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold uppercase tracking-widest">
+          <span class="company-text" style="color: #19626f;">Catalyz</span><span class="company-accent" style="color: #FEBC11;">U</span>
+        </span>
+      </h1>
+      
+      <div class="animate-fade-in">
+        <app-button 
+          [label]="'Get Started'" 
+          (clicked)="onGetStarted()" />
+      </div>
+    </div>
+    
+    <div class="absolute top-0 left-0 w-full h-full pointer-events-none z-0">
+      <div class="glow-orb glow-orb-1"></div>
+      <div class="glow-orb glow-orb-2"></div>
+    </div>
+  </div>
+</div>
+
