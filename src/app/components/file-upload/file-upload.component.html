@@ -1,3 +1,7 @@
+@if (isUploading) {
+  <app-loading-overlay [message]="uploadMessage" />
+}
+
 <app-card 
   [title]="'Upload Your Document'" 
   [subtitle]="'Share your PDF or DOCX file to get started'">
@@ -62,7 +66,15 @@
         formControlName="file" />
     </div>
     
-    @if (selectedFile) {
+    @if (uploadError) {
+      <div class="text-center p-4 rounded-lg" style="background: rgba(255, 0, 0, 0.1); border: 1px solid rgba(255, 0, 0, 0.3);">
+        <p class="text-sm sm:text-base" style="color: #ff6b6b;">
+          {{ uploadError }}
+        </p>
+      </div>
+    }
+    
+    @if (selectedFile && !isUploading) {
       <div class="flex justify-center">
         <app-button 
           [label]="'Upload Document'" 
